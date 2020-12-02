@@ -46,7 +46,7 @@ fun p2v2 (input: List<Int>): Int? {
     return null
 }
 
-fun parseInput(fileName: String): List<Int> {
+fun parseInput1(fileName: String): List<Int> {
     val nums = mutableListOf<Int>()
     File(fileName).forEachLine { nums.add(it.toInt()) }
     return nums
@@ -54,9 +54,7 @@ fun parseInput(fileName: String): List<Int> {
 
 
 fun main() {
-    val path1 = System.getProperty("user.dir")
-    println(path1)
-    val input = parseInput("$inputpath/day1.in")
+    val input = parseInput1("$inputpath/day1.in")
 
     val p1v1 = p1v1(input)
     val p1v2 = p1v2(input)
